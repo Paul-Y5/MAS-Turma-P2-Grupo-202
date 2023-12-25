@@ -10,8 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -24,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <!-- ko if: Username() == undefined-->
-                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal">Marcações</a>
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal">Marcações</a>
                     <!-- /ko -->
                     <!-- ko if: Username() != undefined-->
                     <a class="nav-link" href="marcação.html">Marcações</a>
@@ -46,7 +44,7 @@
                     <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal">Sign In/Sign Up</a>
                     <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal"><img style="height:30px;" src="log-in_icon.png"></a>
                     <!-- /ko -->
-
+                    
                     <!-- ko if: Username() != undefined-->
                     <a class="nav-link" data-bind="text: Username" href="cliente.html"></a>
                     <a class="nav-link" href="cliente.html"><img style="height:30px;" src="log-in_icon.png"></a>
