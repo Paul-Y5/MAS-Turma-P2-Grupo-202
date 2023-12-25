@@ -1,5 +1,15 @@
 $(document).ready(function () {
-    var mymap = L.map('mapid').setView([0, 0], 13);
+    var mymap = L.map("mapid", {
+      center: [39.3999, -8.2245],
+      zoom: 12,
+      minZoom: 7,
+      maxZoom: 20,
+      maxBounds: [
+        [42.1515, -6.1894],
+        [36.9515, -9.5615],
+      ],
+      maxBoundsViscosity: 1,
+    });
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
