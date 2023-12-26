@@ -1,3 +1,19 @@
+var estaaqui = L.icon({
+    iconUrl: 'Imagem1-removebg-preview.png',
+
+    iconSize:     [38, 60], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var oficina = L.icon({
+    iconUrl: 'Imagem2-removebg-preview.png',
+
+    iconSize:     [38, 60], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
 $(document).ready(function () {
     var mymap = L.map("mapid", {
       center: [39.3999, -8.2245],
@@ -24,8 +40,8 @@ $(document).ready(function () {
                 };
                 // Center the map on the user's coordinates
                 mymap.setView([coords.lat, coords.lng]);
-                L.marker([coords.lat, coords.lng]).addTo(mymap)
-                    .bindPopup("<p>" + 'Você está aqui' + "</p><br>");
+                L.marker([coords.lat, coords.lng], {icon: estaaqui}).addTo(mymap)
+                    .bindPopup("<b>" + 'Você está aqui' + "</b>");
                 resolve(coords);
             }, error => {
                 reject(error);
@@ -53,7 +69,7 @@ $(document).ready(function () {
             return;
         }
 
-        L.marker([lat, lng]).addTo(mymap)
+        L.marker([lat, lng], {icon: oficina}).addTo(mymap)
             .bindPopup("<b>" + shop.Name + "</b><br>" + shop.Address);
     });
 
@@ -64,3 +80,4 @@ $(document).ready(function () {
         console.error("Error getting user's location: ", error);
     });
 });
+
