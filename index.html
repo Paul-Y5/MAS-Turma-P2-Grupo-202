@@ -108,9 +108,14 @@
                     </div>
                     <div class="card-body">
                         <span>Fazer marcação</span>
-                        <form action="marcação.html">
-                            <input type="submit" class="btn btn-light item-wr" value="Agendar >" />
-                        </form>
+                        <div class="container mt-2">
+                            <!-- ko if: Username() == undefined-->
+                            <a class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal">Agendar ></a>
+                            <!-- /ko -->
+                            <!-- ko if: Username() != undefined-->
+                            <a class="btn btn-light" href="marcação.html">Agendar ></a>
+                            <!-- /ko -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,9 +126,14 @@
                     </div>
                     <div class="card-body">
                         <span>Peça já um orçamento para a sua viatura</span>
-                        <form action="orçamento.html">
-                            <input type="submit" class="btn btn-light item-wr" value="Agendar >"/>
-                        </form>
+                        <div class="container mt-2">
+                            <!-- ko if: Username() == undefined-->
+                            <a class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal">Pedir ></a>
+                            <!-- /ko -->
+                            <!-- ko if: Username() != undefined-->
+                            <a class="btn btn-light" href="orçamento.html">Pedir ></a>
+                            <!-- /ko -->
+                        </div>
                     </div>
                     </div>
                 </div>
