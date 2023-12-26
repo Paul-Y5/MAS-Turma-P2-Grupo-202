@@ -34,3 +34,34 @@ body {
 .color-blue {
     background-color: #202A62;
 }
+
+.carousel-item {
+    z-index: -100;
+    height: 600px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .carousel-item:nth-child(1) {
+        background-image: url('https://business.yelp.com/wp-content/uploads/2020/12/lp-ban-auto-repair-business-plan.jpg');
+    }
+
+    .carousel-item:nth-child(2) {
+        background-image: url('https://www.getac.com/uploads/2023/03/autorepairworkshop_cover.png');
+    }
+
+    .carousel-item:nth-child(3) {
+        background-image: url('https://www.workshopmate.com.au/media/4561/cost-control-strategies-for-automotive-workshop-s-wsm.png');
+    }
+
+    .carousel-item:nth-child(4) {
+        background-image: url('https://www.shutterstock.com/image-photo/portrait-shot-handsome-mechanic-working-600nw-1711144648.jpg');
+    }
+
+    .carousel-item:nth-child(5) {
+        background-image: url('https://prodiags.com/wp-content/uploads/2021/01/Korjaamopaallikko_Tyontekijat_1000X341.jpg');
+    }
+    .carousel-item:nth-child(6) {
+        background-image: url('https://mbshosting.s3.amazonaws.com/ms-ic-bw/files/1578568759.62705e938bf57b3326f89e59ad13b35b.jpg');
+    }

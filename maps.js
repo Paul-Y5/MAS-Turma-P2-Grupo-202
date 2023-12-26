@@ -41,7 +41,7 @@ $(document).ready(function () {
                 // Center the map on the user's coordinates
                 mymap.setView([coords.lat, coords.lng]);
                 L.marker([coords.lat, coords.lng], {icon: estaaqui}).addTo(mymap)
-                    .bindPopup("<b>" + 'Você está aqui' + "</b>");
+                    .bindPopup("<b>" + 'Você está aqui!' + "</b>");
                 resolve(coords);
             }, error => {
                 reject(error);
@@ -70,7 +70,7 @@ $(document).ready(function () {
         }
 
         L.marker([lat, lng], {icon: oficina}).addTo(mymap)
-            .bindPopup("<b>" + shop.Name + "</b><br>" + shop.Address);
+            .bindPopup("<b>" + shop.Name + "</b></br>" + shop.Adress );
     });
 
     // Call the function to get user coordinates and center the map

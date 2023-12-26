@@ -53,40 +53,48 @@
             </div>
         </div>
     </nav>
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="r8.jpg" class="d-block w-100" style="background-size:cover; height:450px" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="buggati do paulo.jpg" class="d-block w-100" style="background-size:cover; height:450px" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="i8.jpg" class="d-block w-100" style="background-size:cover; height:450px" alt="...">
-            </div>
+    <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5500">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <div class="carousel-inner">
+            <div class="carousel-item active"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden"></span>
         </button>
     </div>
     <br/>
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="container" style="text-align: justify;">
+        <p>Bem-vindo à Turbo Oficinas, a sua escolha confiável para serviços automotivos excepcionais. Com uma paixão pela excelência e um compromisso inabalável com a satisfação do cliente, estamos aqui para superar as suas expectativas em cada visita.</p>
+        <p>Na Turbo, a qualidade é a nossa prioridade. Empenhamo-nos em utilizar as mais recentes tecnologias e técnicas de serviço para garantir que o seu veículo recebe o melhor tratamento possível. A nossa equipa de técnicos altamente qualificados e experientes está dedicada a manter a segurança e o desempenho do seu veículo.</p>
+        <p>Oferecemos uma vasta gama de serviços automotivos para atender a todas as suas necessidades. Desde a manutenção regular até reparos especializados, estamos equipados para lidar com todos os desafios mecânicos do seu veículo. Conte connosco para proporcionar soluções abrangentes e eficazes.</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
             <div class="col">
                 <div class="card h-100">
                     <div class="card-header">
-                        <div class="card-title">Perto de si</div>
+                        <div class="card-title">Perto de si<span style="float: inline-end;"><i class="fa-solid fa-map-location-dot"></i></span></div>
                     </div>
                     <div class="card-body">
                         <span>Procure por oficinas perto de si</span>    
                             
-                        <form action="mapas.html">
-                            <input type="submit" class="btn btn-light item-wr" value="Agendar >" />
+                        <form action="pertodesi.html">
+                            <input type="submit" class="btn btn-light item-wr" value="Procurar >" />
                         </form>
                     </div>
                 </div>
@@ -96,7 +104,7 @@
             <div class="col">
                 <div class="card h-100">
                     <div class="card-header">
-                        <div class="card-title">Marcações</div>
+                        <div class="card-title">Marcações<span style="float: inline-end;"><i class="fa-solid fa-screwdriver-wrench"></i></span></div>
                     </div>
                     <div class="card-body">
                         <span>Fazer marcação</span>
@@ -109,7 +117,7 @@
             <div class="col">
                 <div class="card h-100">
                     <div class="card-header" >
-                        <div class="card-title">Orçamentos</div>
+                        <div class="card-title">Orçamentos<span style="float: inline-end;"><i class="fa-solid fa-hand-holding-dollar"></i></span></div>
                     </div>
                     <div class="card-body">
                         <span>Peça já um orçamento para a sua viatura</span>
