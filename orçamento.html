@@ -49,6 +49,14 @@
 
   <!--Form para o orçamento-->
   <form class="container needs-validation mt-3" id="orcamentoForm" novalidate>
+    <div class="container row">
+      <label for='shopInput' id='shopLabel'>Shop</label>
+      <select class="form-select form-control" id='shopInput' name='shop' aria-describedby='shopLabel shopError' minlength="3"
+      data-bind="options:Shops, optionsText:'Name',value:selectedShop, optionsCaption:'Choose the shop'"  required></select>
+      <div class='invalid-feedback' id='shopError'>
+        Seleciona 1
+      </div>
+    </div>
 
     <div class="row">
       <div class="container col-6">

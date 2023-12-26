@@ -14,6 +14,7 @@ var vm = function() {
 
     self.initiate = function () {
         var currentShop = getActiveAccount()
+        console.log('Current Shop', currentShop)
 
         self.Name(currentShop.Name)
         self.Email(currentShop.Email)
@@ -25,7 +26,6 @@ var vm = function() {
         self.Orders(getOrdersByShop(self.Name()))
         self.Cars(currentShop.Cars)
 
-        console.log('Current Shop', currentShop)
         console.log('VM initialized. . .')
     }
 
@@ -36,6 +36,7 @@ var viewModel = new vm()
 
 function checkInCar(n,order) {
     var shop = getShopByName(n)
+    console.log(n,order,shop)
 
     var cars = shop.Cars
     cars.push(order.Car)
@@ -48,7 +49,7 @@ function checkInCar(n,order) {
 function updateShop(name,newData){
     var shops = getShops()
 
-    shops = shops.map(element => {
+    var shops = shops.map(element => {
         if (element.Username == username) {
             return newData
         }
@@ -57,9 +58,7 @@ function updateShop(name,newData){
         }
     })
 
-    var activeShop = getActiveAccount()
-
-    if (activeShop.Name == name) {
+    if (getActiveAccount().Name == name) {
         localStorage.setItem('activeShop',JSON.stringify(newData))
     }
 
@@ -105,7 +104,7 @@ function registerShop() {
 }
 
 function updateShop(name,newData){
-    var shops = getUsers()
+    var shops = getShops()
 
     shops = shops.map(element => {
         if (element.Name == name) {
@@ -126,14 +125,14 @@ function updateShop(name,newData){
 }
 
 function getActiveAccount(){
-    var user = JSON.parse(localStorage.getItem('activeShop'))
+    var shop = JSON.parse(localStorage.getItem('activeShop'))
 
-    if (user == null) {
+    if (shop == null) {
         localStorage.setItem('activeShop','{}')
         return {}
     }
     else {
-        return user
+        return shop
     }
 }
 
@@ -190,9 +189,9 @@ function getOrdersByShop(n) {
     var orders = []
 
     users.forEach(element => {
-        element.Orders.forEach(element => {
-            if (element.Shop.Name == n) {
-                orders.push(element)
+        element.Orders.forEach(e => {
+            if (e.Shop.Name == n) {
+                orders.push(e)
             }
         })
     })

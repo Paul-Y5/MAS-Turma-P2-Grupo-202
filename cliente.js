@@ -336,7 +336,8 @@ $(document).ready(function(){
             'Description': $('#descriptionInput').val(),
             'Status': 'Pending',
             'Type':'Orcamento',
-            'PartsType': $('#partsTypeInput').val()
+            'PartsType': $('#partsTypeInput').val(),
+            'Shop': viewModel.selectedShop()
         }
 
         user.Orders.push(newOrder)
